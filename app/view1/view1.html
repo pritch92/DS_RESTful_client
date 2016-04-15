@@ -17,18 +17,23 @@
         
     </tr>
 </table>
-<ul ng-if="selectedUser != null">
-    <li ng-if="selectedUser.company != null ">{{selectedUser.company}}</li>
-    <li>{{selectedComment.comment}}</li>
-        
-</ul><br /><br />
-<form novalidate class="simple-form" id="simple-form">
-    Username: <input type="text" ng-model="user.username" /><br />
-    Name:     <input type="text" ng-model="user.name" /><br />
-    Company:  <input type="text" ng-model="user.company" /><br />
-    Comment:  <textarea name="comment" form="simple-form"></textarea><br />
+<div class="comments">
+    <ul ng-if="selectedUser != null">
+        <li ng-if="selectedUser.company != null " class="company">{{selectedUser.company}}</li>
+        <li>{{selectedComment.comment}}</li>
+
+    </ul><br /><br />
+</div>
+<form ng-model="newUser">
+    <div class="firstInputs">
+    Username: <input type="text" ng-model="newUser.username" id="username" />
+    Name:     <input type="text" ng-model="newUser.name" id="name" /><br /><br />
+    Company:  <input type="text" ng-model="newUser.company" id="company" /></div><br />
     
-    <input type="submit" ng-click="update(user)" value="Save" />
+    Comment:  <textarea name="comment" form="simple-form" ng-model="newUser.comment" id="comment"></textarea>
+    
+    <button class="btn btn-large btn-success" ng-click="postComments(newUser)">Comment</button>
+
 </form>
 
     

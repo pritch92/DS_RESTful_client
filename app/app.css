@@ -28,3 +28,77 @@
   content: "";
   padding: 0;
 }
+
+table {
+    border: 1px solid black;
+    width: 100%;
+}
+
+th {
+    border-bottom: 3px solid black;
+    height:40px;
+    padding: 15px;
+    background-color: #990099;
+    color:aliceblue;
+    text-align: left;
+}
+
+td {
+    //border: 1px solid black;
+    width: 50%;
+    height: 20px;
+    padding:15px;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+    
+}
+
+tr:hover {
+    background-color: #990099;
+    color: aliceblue;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    
+}
+
+
+.comments {
+    text-align: center;
+    height: 80px;
+    padding-bottom:  30px;
+    border: 2px solid #990099;
+    font-size: 25px;
+}
+
+
+form {
+
+    margin-left: 488px;
+    padding: 12px;
+}
+input[type=text] {
+    display: inline-block;
+    box-sizing: border-box;
+}
+
+input#company {
+    margin-left: 5px;
+}
+
+textarea {
+    box-sizing: border-box;
+    margin-left: 5px;
+    width: 250px;
+
+}
+
+button {
+    margin-left: 50px;
+}
